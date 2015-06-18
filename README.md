@@ -96,10 +96,10 @@ date. There should be four PNG files and four R code files.
 
 ### Plot 3
 
-![plot of chunk unnamed-chunk-4](Project3/Plot3.png.png) 
+![plot of chunk unnamed-chunk-4](Project1/Plot3.png.png) 
 
 
 ### Plot 4
 
-![plot of chunk unnamed-chunk-5](Project4/Plot4.png) 
+![plot of chunk unnamed-chunk-5](Project1/Plot4.png) 
 
