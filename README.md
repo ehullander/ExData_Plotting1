@@ -96,7 +96,7 @@ date. There should be four PNG files and four R code files.
 
 ### Plot 3
 
-![plot of chunk unnamed-chunk-4](Project1/Plot3.png.png) 
+![plot of chunk unnamed-chunk-4](Project1/Plot3.png) 
 
 
 ### Plot 4
