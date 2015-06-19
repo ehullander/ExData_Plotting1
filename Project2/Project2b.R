@@ -8,7 +8,7 @@ NEI[,'year.f']<-factor(as.character(NEI$year))
 NEI[,'type.f']<-factor(as.character(NEI$type))
 
 ##Plot 1
-with(NEI, tapply(Emissions, year.f, sum))
+#with(NEI, tapply(Emissions, year.f, sum))
 totemissions<-with(NEI, tapply(Emissions, year.f, sum))
 plot(names(totemissions),totemissions/1e6,type="h", 
      lwd=10, 
@@ -20,7 +20,7 @@ plot(names(totemissions),totemissions/1e6,type="h",
 ##Plot 2
 Baltemissions=subset(NEI,fips=="24510")
 
-with(Baltemissions, tapply(Emissions, year.f, sum))
+#with(Baltemissions, tapply(Emissions, year.f, sum))
 totBalt<-with(Baltemissions, tapply(Emissions, year.f, sum))
 plot(names(totBalt),totBalt/1e3,type="h", 
      lwd=10, 
@@ -78,13 +78,13 @@ plot(names(totemissions),totemissions/1e6,type="h",
 #Plot 5
 
 b<-SCC[grep('Mobile',SCC[,'EI.Sector']),]
-a<-grep('Mobile',b[,'EI.Sector'])
+a<-grep('On-Road',b[,'EI.Sector'])
 SCCMot<-b[a,][,1]
 Baltemissions=subset(NEI,fips%in%"24510")
 NEIMot<-Baltemissions[Baltemissions$SCC%in%SCCMot,]
 with(NEIMot, tapply(Emissions, year.f, sum))
 totemissions<-with(NEIMot, tapply(Emissions, year.f, sum))
-plot(names(totemissions),totemissions/1e6,type="h", 
+plot(names(totemissions),totemissions,type="h", 
      lwd=10, 
      lend=2, 
      col="red", 
@@ -92,17 +92,18 @@ plot(names(totemissions),totemissions/1e6,type="h",
      ylab='PM2.5 (Megatons)', 
      main='Annual Motor Vehicle PM2.5 Emissions Baltimore')
 
+
 ##function to find motor vehicle
 #Plot 6
 
 b<-SCC[grep('Mobile',SCC[,'EI.Sector']),]
-a<-grep('Mobile',b[,'EI.Sector'])
+a<-grep('On-Road',b[,'EI.Sector'])
 SCCMot<-b[a,][,1]
 Baltemissions=subset(NEI,fips%in%"06037")
 NEIMot<-Baltemissions[Baltemissions$SCC%in%SCCMot,]
 with(NEIMot, tapply(Emissions, year.f, sum))
 totemissions<-with(NEIMot, tapply(Emissions, year.f, sum))
-plot(names(totemissions),totemissions/1e6,type="h", 
+plot(names(totemissions),totemissions,type="h", 
      lwd=10, 
      lend=2, 
      col="red", 
