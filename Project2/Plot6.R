@@ -18,16 +18,16 @@ NEIMot<-Baltemissions[Baltemissions$SCC%in%SCCMot,]
 with(NEIMot, tapply(Emissions, year.f, sum))
 totemissions<-with(NEIMot, tapply(Emissions, year.f, sum))
 #plot
-png(filename="Plot6.png", width = 1300, height = 1300)
+png(filename="Plot6.png", width = 600, height = 600)
 par(mfrow=c(1,2))
 par(mar=c(4,4,4,4))
 plot(names(totemissions),totemissions,type="h", 
-     lwd=100, 
+     lwd=50, 
      lend=2, 
      col="grey", 
      xlab='year', 
      ylab='PM2.5 (tons)', 
-     main='Annual Motor Vehicle PM2.5 Emissions Baltimore')
+     main='Motor Vehicle Emissions Baltimore')
 
 b<-SCC[grep('Mobile',SCC[,'EI.Sector']),]
 a<-grep('On-Road',b[,'EI.Sector'])
@@ -38,10 +38,10 @@ with(NEIMot, tapply(Emissions, year.f, sum))
 totemissions<-with(NEIMot, tapply(Emissions, year.f, sum))
 
 plot(names(totemissions),totemissions,type="h", 
-     lwd=100, 
+     lwd=50, 
      lend=2, 
      col="grey", 
      xlab='year', 
      ylab='PM2.5 (tons)', 
-     main='Annual Motor Vehicle PM2.5 Los Angeles')
+     main='Motor Vehicle Los Angeles')
 dev.off()

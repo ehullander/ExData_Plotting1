@@ -10,7 +10,7 @@ NEI[,'type.f']<-factor(as.character(NEI$type))
 ##Plot 2
 Baltemissions=subset(NEI,fips=="24510")
 totBalt<-with(Baltemissions, tapply(Emissions, year.f, sum))
-png(filename="Plot2.png", width = 1300, height = 1300)
+png(filename="Plot2.png", width = 600, height = 600)
 plot(names(totBalt),totBalt,type="h", 
      lwd=100, 
      lend=2, 

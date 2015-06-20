@@ -29,7 +29,7 @@ for(row in 1:nrow(Baltyeartype))
 Baltmelt[,1]<-factor(Baltmelt[,1])
 Baltmelt[,2]<-factor(Baltmelt[,2])
 #plot
-png(filename="Plot3.png", width = 1600, height = 1600)
+png(filename="Plot3.png", width = 600, height = 600)
 qplot(year,emissions,data=Baltmelt, 
       group=1, 
       geom=c("line","point"),

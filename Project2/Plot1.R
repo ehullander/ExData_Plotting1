@@ -10,7 +10,7 @@ NEI[,'type.f']<-factor(as.character(NEI$type))
 ##Plot 1
 #with(NEI, tapply(Emissions, year.f, sum))
 totemissions<-with(NEI, tapply(Emissions, year.f, sum))
-png(filename="Plot1.png", width = 1300, height = 1300)
+png(filename="Plot1.png", width = 600, height = 600)
 plot(names(totemissions),totemissions,type="h", 
      lwd=100, 
      lend=2, 
